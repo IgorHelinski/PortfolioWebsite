@@ -3,60 +3,67 @@
   // logos
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
+  import brumhilde from './assets/brumhilde.jpg'
+
   // librarys idk
   import Counter from './lib/Counter.svelte'
   import Draggable from './lib/Draggable.svelte';
-  import "7.css/dist/7.scoped.css"
+  import "7.css/dist/7.scoped.css";
 </script>
 
 <main>
-  <h1>Igor Heliński</h1>
-  <h2>Portfolio</h2>
-
-  <Draggable>
-    <div class="resizable">
-    <div class="window" style="width: 700px">
-      <div class="title-bar">
-        <div class="title-bar-text">A Window With Stuff In It</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
+  <Draggable left={700} top={500}>
+    <div class="win7" style="width:480px;">
+      <div class="window glass active">
+        <div class="title-bar">
+          <div class="title-bar-text" >A window with contents</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
         </div>
-      </div>
-    </div>
-      <div class="window-body">
-        <p>There's so much room for activities!</p>
-        <div class="card">
-          <Counter />
+        <div class="window-body has-space" style="height:240px;">
+          <p>There's so much room for activities!</p>
+          <p><strong style="color: purple">✨ Damn ✨</strong></p>
+          <Counter/>
         </div>
       </div>
     </div>
   </Draggable>
 
-  
+  <Draggable left={150} top={100}>
+        <div class="window-body has-space no-drag" style="max-height:900px;">
+          <center>
+            <p>Hi, im Igor and i like programming and game development! </p>
+            <p>... btw that's a really<strong style="color: purple">✨ cool ✨</strong>cat</p>
+            <img src={brumhilde} alt="funny cat">
+          </center>
+        </div>
+  </Draggable>
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
+  <div class="win7 task-bar">
+    <div class="window violet glass active">
+      <div class="title-bar" style="height: 35px;">
+        <div class="title-bar-text">A task bar</div>
+      </div>
+    </div>
+  </div>
 
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn moreee
-  </p>
-
-  
 </main>
 
 <style>
-
-
-  .resizable {
-  display: inline-block;
-  resize: both;
-  overflow: hidden;
-  line-height: 0;
+  .task-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
+  .violet::before,
+  .violet > .title-bar {
+    background-color: #6ec1e7;
+  }
 
   .logo {
     height: 6em;
