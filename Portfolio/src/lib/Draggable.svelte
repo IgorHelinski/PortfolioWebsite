@@ -1,14 +1,25 @@
 <script>
+    import { activeTitleBar }  from '../stores';
+
+    // offset
     export let left = 10;
     export let top = 10;
+    //
+    export let windowWidth = 480;
+    export let titleBarText = "Default Text";
     let moving = false;
 
-    function Start(){
-        console.log("true");
+    let _activeTitleBar;
+
+    activeTitleBar.subscribe((value) => {
+		_activeTitleBar = value;
+	});
+
+    function StartDrag(){
         moving = true;
     }
 
-    function Stop(){
+    function StopDrag(){
         moving = false;
     }
 
@@ -18,30 +29,33 @@
             top += e.movementY;
         }
     }
-</script>
 
-<svelte:window on:mouseup={Stop} on:mousemove={Move}/>
+    function UpdateActive(){
+        activeTitleBar.set(titleBarText);
+    }
+</script>
+<svelte:window on:mouseup={StopDrag} on:mousemove={Move}/>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<section on:mousedown={Start}
-     class="draggable" 
-     style="
-     left: {left}px; 
-     top: {top}px;
-     ">
-     <div class="win7" style="width:480px;">
-        <div class="window glass active">
-          <div class="title-bar">
-            <div class="title-bar-text" >Me</div>
+<section class="draggable" style="left: {left}px; top: {top}px;" on:mousedown={UpdateActive}>
+    <div class="win7" style="width:{windowWidth}px;">
+        <div class="window glass {_activeTitleBar === titleBarText ? 'active onTop' : 'onBottom'}">
+            <div class="title-bar" on:mousedown={StartDrag}>
+            <div class="title-bar-text" >{titleBarText}</div>
             <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
             </div>
-          </div>
-          <slot class="no-drag"></slot>
+            </div>
+            <slot> 
+                <h1>Damn, no content here huh? 
+                    Must have forgotten to add stuff to the slot,
+                    dang it! ;D
+                </h1>
+            </slot>
         </div>
-      </div>
+    </div>       
 </section>
 
 <style>
@@ -49,5 +63,13 @@
         user-select: none;
         position: absolute;
         cursor: move;
+    }
+
+    .onTop{
+        user-select: none;
+    }
+
+    .onBottom{
+        user-select: none;
     }
 </style>
