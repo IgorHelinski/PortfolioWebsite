@@ -8,7 +8,6 @@
     export let windowWidth = 480;
     export let titleBarText = "Default Text";
     let moving = false;
-
     let _activeTitleBar;
 
     activeTitleBar.subscribe((value) => {
@@ -33,6 +32,14 @@
     function UpdateActive(){
         activeTitleBar.set(titleBarText);
     }
+
+    function Hide(){
+
+    }
+
+    function Close(){
+
+    }
 </script>
 <svelte:window on:mouseup={StopDrag} on:mousemove={Move}/>
 
@@ -43,9 +50,8 @@
             <div class="title-bar" on:mousedown={StartDrag}>
             <div class="title-bar-text" >{titleBarText}</div>
             <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close"></button>
+                <button aria-label="Minimize" on:click={Hide}></button>
+                <button aria-label="Close" on:click={Close}></button>
             </div>
             </div>
             <slot> 
