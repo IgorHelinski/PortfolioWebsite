@@ -4,9 +4,15 @@
     export let height = 60;
 </script>
 
-<section>
-    <img src={icon} alt="icon" width="{width}px" height="{height}px" class="win7">
+<section class="iconThing">
+    <img src={icon} alt="icon" width="{width}px" height="{height}px">
     <div class="caption" style="width:{width}px">
         <slot></slot>
     </div>
 </section>
+
+<style>
+    .iconThing{
+        user-select: none;
+    }
+</style>

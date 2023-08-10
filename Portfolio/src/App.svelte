@@ -15,35 +15,47 @@
   import Counter from './lib/Counter.svelte'
   import Draggable from './lib/Draggable.svelte';
   import Icon from './lib/Icon.svelte';
+  import RepoCard from './lib/RepoCard.svelte';
   import "7.css/dist/7.scoped.css";
   
 </script>
 
-<div class="icon">
-  <Icon icon={icon_binEmpty}>
-    <div>Recycle Bin</div>
-  </Icon>
-</div>
-
-<div class="icon">
-  <Icon icon={icon_thisPC}>
-    <div>This PC</div>
-  </Icon>
-</div>
-
-<div class="icon">
-  <Icon icon={icon_folderStar}>
-    <div>Projects!</div>
-  </Icon>
-</div>
-
 <main>
+  <div class="icon">
+    <Icon icon={icon_binEmpty}>
+      <div>Recycle Bin</div>
+    </Icon>
+  </div>
+
+  <div class="icon">
+    <Icon icon={icon_thisPC}>
+      <div>This PC</div>
+    </Icon>
+  </div>
+
+  <div class="icon">
+    <Icon icon={icon_folderStar}>
+      <div>Projects!</div>
+    </Icon>
+  </div>
+
   <div class="windowBox">
     <Draggable left={1300} top={100} titleBarText={"Random ass window"}>
       <div class="window-body has-space content" style="height:240px;">
         <p>There's so much room for activities!</p>
         <p><strong style="color: purple">✨ Damn ✨</strong></p>
         <Counter/>
+      </div>
+    </Draggable>
+  </div>
+
+  <div class="windowBox">
+    <Draggable left={700} top={600} titleBarText={"My projects"}>
+      <div class="window-body has-space content" style="height:500px;">
+        <p>My <strong style="color: purple">✨ Projects ✨</strong></p>
+        <RepoCard repoUrl={"IgorHelinski/MyImageOperations"}/>
+        <RepoCard repoUrl={"IgorHelinski/PineLinks"}/>
+        <RepoCard repoUrl={"IgorHelinski/Depozyto"}/>
       </div>
     </Draggable>
   </div>
@@ -63,7 +75,7 @@
   <div class="win7 task-bar">
     <div class="window violet">
       <div class="title-bar" style="height: 35px;">
-          
+
       </div>
     </div>
   </div>
@@ -80,6 +92,15 @@
     color: whitesmoke; 
     text-shadow: -3px 0px 4px black, 0 3px 3px black, 2px 0 1px black, 0 -1px 2px black; 
     font-size:small;
+  }
+
+  :global(.iconThing img){
+    will-change: filter;
+    transition: filter 300ms;
+  }
+
+  :global(.iconThing img):hover{
+    filter: drop-shadow(0 0 2em #fffcfbef);
   }
 
   :global(.caption){
