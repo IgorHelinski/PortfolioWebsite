@@ -29,7 +29,7 @@
 
   <div class="icon">
     <Icon icon={icon_thisPC}>
-      <div>This PC</div>
+      <div>About me!</div>
     </Icon>
   </div>
 
@@ -50,18 +50,23 @@
   </div>
 
   <div class="windowBox">
-    <Draggable left={700} top={600} titleBarText={"My projects"}>
-      <div class="window-body has-space content" style="height:500px;">
-        <p>My <strong style="color: purple">✨ Projects ✨</strong></p>
-        <RepoCard repoUrl={"IgorHelinski/MyImageOperations"}/>
-        <RepoCard repoUrl={"IgorHelinski/PineLinks"}/>
-        <RepoCard repoUrl={"IgorHelinski/Depozyto"}/>
+    <Draggable left={500} top={400} titleBarText={"My projects"} windowWidth={830}>
+      <div class="window-body has-space content" style="height:420px;">
+        <center>
+          <p>Some of my <strong style="color:blueviolet">✨ Projects ✨</strong></p>
+        </center>
+        <RepoCard repoUrl={"IgorHelinski/PineLinks"} cardWidth={400}/>
+        <RepoCard repoUrl={"IgorHelinski/Depozyto"} cardWidth={400}/>
+        <RepoCard repoUrl={"IgorHelinski/PortfolioWebsite"} cardWidth={400}/>
+        <RepoCard repoUrl={"IgorHelinski/MyImageOperations"} cardWidth={400}/>
+        <RepoCard repoUrl={"IgorHelinski/TechnicalRacing"} cardWidth={400}/>
+        <RepoCard repoUrl={"IgorHelinski/ShopUiSystem-Unity"} cardWidth={400}/>
       </div>
     </Draggable>
   </div>
 
   <div class="windowBox">
-    <Draggable left={200} top={100} titleBarText={"About me!"}>
+    <Draggable left={200} top={50} titleBarText={"About me!"}>
       <div class="window-body has-space content" style="max-height:900px;">
         <center>
           <p>Hi, im Igor and i like programming and game development! </p>
@@ -70,14 +75,6 @@
         </center>
       </div>
     </Draggable>
-  </div>
-
-  <div class="win7 task-bar">
-    <div class="window violet">
-      <div class="title-bar" style="height: 35px;">
-
-      </div>
-    </div>
   </div>
 
 </main>
