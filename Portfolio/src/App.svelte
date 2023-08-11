@@ -5,6 +5,9 @@
   import viteLogo from '/vite.svg'
   import brumhilde from './assets/brumhilde.jpg'
 
+  // gifs
+  import butterfly_Welcome from './assets/Gifs/welbutterfly.gif'
+
   // icons
   import icon_thisPC from './assets/Win7Icons/thisPC.ico'
   import icon_binEmpty from './assets/Win7Icons/BinEmpty.ico'
@@ -16,6 +19,7 @@
   import Draggable from './lib/Draggable.svelte';
   import Icon from './lib/Icon.svelte';
   import RepoCard from './lib/RepoCard.svelte';
+  // css
   import "7.css/dist/7.scoped.css";
   
 </script>
@@ -41,8 +45,9 @@
 
   <div class="windowBox">
     <Draggable left={1300} top={100} titleBarText={"Random ass window"}>
-      <div class="window-body has-space content" style="height:240px;">
+      <div class="window-body has-space content" style="height:auto;">
         <p>There's so much room for activities!</p>
+        <img src={butterfly_Welcome} alt="welcome">
         <p><strong style="color: purple">✨ Damn ✨</strong></p>
         <Counter/>
       </div>
@@ -67,7 +72,7 @@
 
   <div class="windowBox">
     <Draggable left={200} top={50} titleBarText={"About me!"}>
-      <div class="window-body has-space content" style="max-height:900px;">
+      <div class="window-body has-space content" style="max-height:auto;">
         <center>
           <p>Hi, im Igor and i like programming and game development! </p>
           <p>... btw that's a really<strong style="color: purple"> ✨ cool ✨ </strong>cat</p>
@@ -89,15 +94,6 @@
     color: whitesmoke; 
     text-shadow: -3px 0px 4px black, 0 3px 3px black, 2px 0 1px black, 0 -1px 2px black; 
     font-size:small;
-  }
-
-  :global(.iconThing img){
-    will-change: filter;
-    transition: filter 300ms;
-  }
-
-  :global(.iconThing img):hover{
-    filter: drop-shadow(0 0 2em #fffcfbef);
   }
 
   :global(.caption){
