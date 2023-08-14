@@ -1,9 +1,8 @@
-:root {
+body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  
   background-image: url('./assets/background.webp');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -16,6 +15,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  margin: 0;
+  padding: 0;
 }
 
 img {

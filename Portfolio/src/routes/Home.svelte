@@ -13,6 +13,8 @@
     import icon_folderStar from '../assets/Win7Icons/folderStar.ico'
     import icon_folderBusiness from '../assets/Win7Icons/folderBusiness.ico'
 
+    import logo_curseGiver from '../assets/CurseGiverLogo64x64.png'
+
     // libs
     import Counter from '../lib/Counter.svelte'
     import Draggable from '../lib/Draggable.svelte';
@@ -21,10 +23,10 @@
 
     // css
     import "7.css/dist/7.scoped.css";
-
+    import '../style.css'
 </script>
 
-<main>
+<body>
     <div class="icon">
       <Icon icon={icon_binEmpty}>
         <div>Recycle Bin</div>
@@ -47,7 +49,13 @@
         <Icon icon={icon_folderBusiness} link={"/#/business"}>
           <div>Business</div>
         </Icon>
-      </div>
+    </div>
+
+    <div class="icon">
+        <Icon icon={logo_curseGiver} link={"/#/cursegiver"}>
+          <div>Curse Giver</div>
+        </Icon>
+    </div>
   
     <div class="windowBox">
       <Draggable left={1300} top={100} titleBarText={"Random ass window"}>
@@ -88,7 +96,7 @@
       </Draggable>
     </div>
   
-  </main>
+</body>
   
   <style>
     .icon{

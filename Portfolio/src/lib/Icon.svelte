@@ -23,7 +23,7 @@
     }
 
     .iconThing:hover {
-        filter: drop-shadow(0 0 2em #00f7fff8);
+        filter: drop-shadow(0 0 2em #77fafff8);
     }
 
     button {

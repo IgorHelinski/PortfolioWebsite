@@ -3,9 +3,7 @@
 </script>
 
 <body style="height: 2137px;">
-    <div class="bg">
-        <h1>Business page</h1>
-    </div>
+    <h1>This is a page for curse giver project!</h1>
 </body>
 
 <style>
@@ -14,12 +12,7 @@
         background-color: #242424;
     }
 
-    .bg{
-        margin: 50px;
-        background-color: whitesmoke;
-    }
-
     h1{
-        color: black;
+        color: whitesmoke;
     }
 </style>
