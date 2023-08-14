@@ -60,10 +60,11 @@
     <div class="windowBox">
       <Draggable left={1300} top={100} titleBarText={"Random ass window"}>
         <div class="window-body has-space content" style="height:auto; background-image:url{stars}">
-          <p>There's so much room for activities!</p>
-          <img src={butterfly_Welcome} alt="welcome">
-          <p><strong style="color: purple">✨ Damn ✨</strong></p>
-          <Counter/>
+            <center>
+                <img src={butterfly_Welcome} alt="welcome">
+                <p><strong style="color: purple">✨ Damn ✨</strong></p>
+                <Counter/>
+            </center>
         </div>
       </Draggable>
     </div>
@@ -137,5 +138,12 @@
     .violet::before,
     .violet > .title-bar {
       background-color: #ff00f2d2;
+    }
+
+    @media only screen and (max-width:700px) {
+        body{
+            background-size: cover;
+            overflow-y:hidden;
+        }
     }
   </style>

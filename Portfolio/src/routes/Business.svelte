@@ -1,18 +1,4 @@
 <script>
-    const themes = {
-    'light-default': {
-      background: 'white',
-      borderColor: '#e1e4e8',
-      color: '#586069',
-      linkColor: '#0366d6',
-    },
-    'dark-theme': {
-      background: 'rgb(13, 17, 23)',
-      borderColor: 'rgb(48, 54, 61)',
-      color: 'rgb(139, 148, 158)',
-      linkColor: 'rgb(88, 166, 255)',
-    }
-  };
 </script>
 
 <body style="height: 2137px;">
@@ -30,6 +16,10 @@
             </li>
             <li>Résumé
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae amet tempora modi, consequuntur explicabo quis quasi ex delectus iusto aliquid aliquam? Maiores aliquam ducimus suscipit assumenda animi, hic recusandae quaerat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut nobis officia soluta voluptas minus illo non dolor cupiditate repellendus, similique nisi blanditiis quae repudiandae obcaecati, voluptatem corrupti nam iste.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea, voluptatum ab quis sequi asperiores. Quam repellendus earum ratione, eius, ab impedit debitis pariatur necessitatibus facere numquam harum porro laboriosam!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corporis sit, ab molestiae commodi officia, consequatur libero blanditiis rem qui reiciendis incidunt maxime iste quo cupiditate assumenda soluta facere.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo temporibus quae similique tenetur alias modi ullam fuga consequuntur eligendi quisquam praesentium, asperiores velit impedit cupiditate ipsa, architecto, exercitationem odit?</p>
             </li>
         </ul>
     </div>
@@ -39,6 +29,7 @@
     body{
         background-image: none;
         background-color: #242424;
+        overflow: scroll;
     }
 
     .bg{
@@ -69,4 +60,16 @@
         font-weight: 400;
         font-size: large;
     }
+
+    @media only screen and (max-width:700px) {
+        .bg{
+            margin: 20px;
+            padding: 15px;
+        }
+
+        .chapters li{
+            margin: auto 10px;
+        }
+    }
+
 </style>
