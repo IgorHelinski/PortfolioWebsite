@@ -22,13 +22,16 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et corporis sit, ab molestiae commodi officia, consequatur libero blanditiis rem qui reiciendis incidunt maxime iste quo cupiditate assumenda soluta facere.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo temporibus quae similique tenetur alias modi ullam fuga consequuntur eligendi quisquam praesentium, asperiores velit impedit cupiditate ipsa, architecto, exercitationem odit?</p>
             </li>
+            <li>Contact
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident accusamus officiis eveniet deserunt dicta beatae, minima aliquid iste fugit nostrum quia aperiam soluta maiores, cupiditate dignissimos distinctio. Accusantium, distinctio id!</p>
+            </li>
         </ul>
     </div>
 </body>
 
 <style>
     body{
-        height: 2137px;
+        height: 100%;
         background-image: none;
         background-color: #242424;
         overflow: scroll;
@@ -36,7 +39,7 @@
     }
 
     .bg{
-        margin: 50px;
+        margin: 80px;
         padding: 15px;
         padding-top: 80px;
         background-color: whitesmoke;
@@ -44,6 +47,8 @@
     }
 
     h1{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 100;
         margin-bottom: 20px;
         color:black;
         text-align: center;
@@ -53,12 +58,14 @@
     .chapters li{
         margin: auto 110px;
 
+        font-family: 'Poppins', sans-serif;
         color:black;
         font-weight: bold;
         font-size: x-large;
     }
 
     .chapters li p{
+        font-family: 'Poppins', sans-serif;
         color:black;
         font-weight: 400;
         font-size: large;

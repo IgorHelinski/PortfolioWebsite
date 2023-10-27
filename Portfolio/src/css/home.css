@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
     content:"";
     left: 0;
     bottom: 0;
-    background: linear-gradient(transparent, #ffffff17);
+    background: linear-gradient(transparent, #ffffff33);
 }
 
 @keyframes fadein {
@@ -56,11 +56,12 @@ body::-webkit-scrollbar {
 
     border: none;
     background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
 
     transition: transform .5s;
     transform: translate(0px, 0px);
     box-shadow: 7px 7px black;
-
+    
 }
 
 #nav-bar button:hover{
@@ -106,8 +107,6 @@ body::-webkit-scrollbar {
 
 #title {
     animation: fadein 2s forwards ease-in-out;
-    margin-top: 50px;
-    margin: 15px;
 }
 
 #title h1{
@@ -117,18 +116,18 @@ body::-webkit-scrollbar {
     font-size: 550%;
     color: white;
     text-shadow: 3px 3px 8px black;
+    margin-top: 200px;
 }
 
 #main{
     animation: fadein 2.5s forwards ease-in-out;
-    margin-top: 400px;
+    margin-top: 350px;
 }
 
 #main h2 {
     float: left;
     margin: 5px;
     margin-left: 450px;
-    margin-right: 250px;
     font-weight: 50;
     font-size: 400%;
     font-family: 'Poppins', sans-serif;
@@ -139,9 +138,46 @@ body::-webkit-scrollbar {
 #main img{
     float: left;
     content: url("../assets/Home/brumhilde.jpg");
+
+    border: 3px solid black 5px;
+    box-shadow: 10px 10px black;
+}
+
+#main h3{
+    float: left;
+    clear: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    color: white;
+    text-shadow: 3px 3px 8px black;
+
+    margin-left: 470px;
+    margin-right: 250px;
+    margin-top: 60px;
+    width: 300px;
+    height: 200px;
 }
 
 #main p{
     color: white;
     clear: both;
+}
+
+#main #about-me{
+    margin-top: 200px;
+}
+
+#main #more{
+    width: 200px;
+    height: 200px;
+    background-image: url(../assets/Home/moreWhite.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    
 }

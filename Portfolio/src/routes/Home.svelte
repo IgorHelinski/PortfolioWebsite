@@ -1,27 +1,60 @@
 <script>
   import '../css/home.css'
+  import {onMount} from "svelte"
+
+  let pageWrapper;
+
+  let y = 0;
+  let about_me_opacity = 1;
+
+
+  $: if (y) {
+    if(y <  600){
+    about_me_opacity = .3;
+  }else{
+    about_me_opacity = 1;
+  }
+}
+
+
+  onMount(()=> {
+    pageWrapper.addEventListener('scroll', function(e) {
+      alert('The scroll event only triggers when there is content to scroll.')
+    })
+  })
+
 </script>
 
+<svelte:window bind:scrollY={y}/>
 
-<div id="page-wrapper">
-
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div id="page-wrapper" bind:this={pageWrapper}  on:scroll={() => {alert("scrolled")}}>
   <section id="nav">
     <div id="nav-bar">
       <h2>Igor Heliński Portfolio</h2>
-      <button>Button 1</button>
-      <button>Button 2</button>
-      <button>Button 3</button>
+      <a href="#/business/"><button>Business</button></a>
+      <a href="#/cursegiver/"><button>Curse Giver Project</button></a>
+      <a href="#/windows7/"><button>Windows 7</button></a>
     </div>
     <div id="nav-box" class="material-symbols-outlined"></div>
   </section>
 
   <section id="title">
-    <h1>Welcome to my <span>awesome</span> website</h1>
+    <h1>Welcome to my <span>awesome</span> website {y}</h1>
   </section>
-  
+
   <section id="main">
-    <h2>Who am i?</h2>
-    <img src="" alt="me">
+    <div id="more"></div>
+
+    <div id="about-me" style="opacity: {about_me_opacity} ;">
+      <h2>Who am i?</h2>
+      <h3>Im Igor and i like programming
+        dgadgagadg
+        agdag
+      </h3>
+      <img src="" alt="me">
+      
+    </div>
 
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem eius neque dignissimos placeat quaerat eveniet? Laborum quia tempora, nobis ipsum, officiis unde magnam expedita dolorem, molestias provident quae distinctio officia?
     Perferendis quo expedita recusandae ducimus incidunt. Quod qui repudiandae nemo laboriosam, ad facilis tempore rerum repellat, fugiat tenetur, numquam unde. Illo iste velit autem non amet incidunt corporis debitis dolorem?
