@@ -1,7 +1,8 @@
 <script>
+
 </script>
 
-<body style="height: 2137px;">
+<body>
     <div class="bg">
         <h1>Igor Heliński</h1>
         <ul class="chapters">
@@ -27,9 +28,11 @@
 
 <style>
     body{
+        height: 2137px;
         background-image: none;
         background-color: #242424;
         overflow: scroll;
+        background-attachment: scroll;
     }
 
     .bg{
@@ -62,6 +65,10 @@
     }
 
     @media only screen and (max-width:700px) {
+        body{
+            overflow: scroll;
+        }
+
         .bg{
             margin: 20px;
             padding: 15px;
@@ -71,5 +78,4 @@
             margin: auto 10px;
         }
     }
-
 </style>
