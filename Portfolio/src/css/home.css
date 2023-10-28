@@ -90,7 +90,8 @@ body::-webkit-scrollbar {
 #nav{
     transition: transform .8s ease-in;
     transform: translateY(-110px);
-    position:static;
+    position:fixed;
+    top:0px;
     width: 100%;
 
     pointer-events: none;
@@ -117,11 +118,16 @@ body::-webkit-scrollbar {
     color: white;
     text-shadow: 3px 3px 8px black;
     margin-top: 200px;
+    letter-spacing: 1px;
+}
+
+#title h1 span{
+    letter-spacing: 15px;
 }
 
 #main{
     animation: fadein 2.5s forwards ease-in-out;
-    margin-top: 350px;
+    margin-top: 450px;
 }
 
 #main h2 {
@@ -133,14 +139,19 @@ body::-webkit-scrollbar {
     font-family: 'Poppins', sans-serif;
     color: white;
     text-shadow: 3px 3px 8px black;
+    letter-spacing: 1px;
 }
 
 #main img{
     float: left;
     content: url("../assets/Home/brumhilde.jpg");
 
-    border: 3px solid black 5px;
+    border: 3px solid black;
     box-shadow: 10px 10px black;
+}
+
+#main #about-me img{
+    margin-bottom: 80px;
 }
 
 #main h3{
@@ -148,13 +159,17 @@ body::-webkit-scrollbar {
     clear: left;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
-    color: white;
+    font-size: 150%;
+    line-height: 38px;
+    letter-spacing: 1px;
+
+    color:aliceblue;
     text-shadow: 3px 3px 8px black;
 
-    margin-left: 470px;
-    margin-right: 250px;
-    margin-top: 60px;
-    width: 300px;
+    margin-left: 460px;
+    margin-right: 50px;
+    margin-top: 15px;
+    width: 500px;
     height: 200px;
 }
 
@@ -163,8 +178,16 @@ body::-webkit-scrollbar {
     clear: both;
 }
 
-#main #about-me{
-    margin-top: 200px;
+.fadein{
+    transition: transform 1s, opacity 1s;
+    transform: translateY(-300px);
+    opacity: 1;
+}
+
+.fadeout{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(0px);
+    opacity: .3;
 }
 
 #main #more{
@@ -174,10 +197,12 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: cover;
     
-    position: absolute;
+    margin-top: 300px;
+    position:absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    
+
+    top:-300px;
 }
