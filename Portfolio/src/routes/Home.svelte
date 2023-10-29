@@ -2,26 +2,27 @@
   import '../css/home.css'
   import { onMount } from 'svelte';
 
-  const scrollIntoView = (node)=>{
-    node.scrollIntoView()
-  }
-
   let y = 0;
   let aboutme = "fadeout";
   let projects = "fadeout";
 
   function toTop(){
-    console.log("aaaaaaaaaaaaa");
-    document.body.scrollIntoView();
-    scrollY = 0;
+    if(y == 0)
+     return;
+
+     
+    window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth'
+    });
   }
 
-  y = 0;
+  y = 0;    
 
   $: if (y) {
     if(y >= 200){
       aboutme = "fadein";
-      console.log("fadein");
     }else{
       aboutme = "fadeout";
     }
@@ -34,8 +35,12 @@
   }
 
   onMount(async () => {
-		//element.scrollIntoView();
-    //y = 1;
+    //console.log("ayuo");
+      window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth'
+    });
 	});
 </script>
 
@@ -53,7 +58,7 @@
     <div id="nav-box" class="material-symbols-outlined"></div>
   </section>
 
-  <div use:scrollIntoView style="background-color: red;"></div>
+  <div style="background-color: red;"></div>
 
   <section id="title">
     <h1>Welcome to my <span>awesome</span> website {y}</h1>
