@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
     content:"";
     left: 0;
     bottom: 0;
-    background: linear-gradient(transparent, #ffffff33);
+    background: linear-gradient(transparent, #ffffff18);
 }
 
 @keyframes fadein {
@@ -47,6 +47,14 @@ body::-webkit-scrollbar {
     text-shadow: 3px 3px 8px black;
 }
 
+#nav-bar #spacer{
+    float:right;
+    position: relative;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 #nav-bar button{
     float:right;
     position: relative;
@@ -57,11 +65,11 @@ body::-webkit-scrollbar {
     border: none;
     background-color: aliceblue;
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 
     transition: transform .5s;
     transform: translate(0px, 0px);
     box-shadow: 7px 7px black;
-    
 }
 
 #nav-bar button:hover{
@@ -72,6 +80,17 @@ body::-webkit-scrollbar {
 #nav-bar button:active{
     transition: transform .2s;
     transform: translate(3px, 3px);
+}
+
+#nav-title{
+    float:left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 150%;
+    color: whitesmoke;
+    padding: 25px 0;
+    text-shadow: 3px 3px 8px black;
+    margin-left: 15px;
 }
 
 #nav-box{
@@ -128,22 +147,25 @@ body::-webkit-scrollbar {
 
 #main{
     animation: fadein 2.5s forwards ease-in-out;
-    margin-top: 450px;
+    margin-top: 400px;
 }
 
 #main h2 {
     float: left;
     margin: 5px;
     margin-left: 450px;
+    margin-right: 300px;
     font-weight: 50;
     font-size: 400%;
     font-family: 'Poppins', sans-serif;
     color: white;
     text-shadow: 3px 3px 8px black;
     letter-spacing: 1px;
+
+    clear: both;
 }
 
-#main img{
+#main #about-me img{
     float: left;
     content: url("../assets/Home/brumhilde.jpg");
 
@@ -152,7 +174,7 @@ body::-webkit-scrollbar {
 }
 
 #main #about-me img{
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
 #main h3{
@@ -171,7 +193,91 @@ body::-webkit-scrollbar {
     margin-right: 50px;
     margin-top: 15px;
     width: 500px;
-    height: 200px;
+
+    margin-bottom: 30px;
+}
+
+.project{
+    float: left;
+}
+
+#depozyto img{
+    margin-top: 30px;
+    margin-left: -100px;
+    clear: left;
+    float: left;
+    content: url("../assets/Home/depozyto1.png");
+    width: 150%;
+    height: 150%;
+
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+
+#depozyto h3{
+    margin-top: 100px;
+    margin-left: 300px;
+    float: left;
+    width: 400px;
+}
+
+#technical-racing h3{
+    margin-top: 100px;
+    margin-left: 300px;
+    float: left;
+}
+
+#technical-racing img{
+    margin-top: 30px;
+    margin-left: -100px;
+    clear: left;
+    float: left;
+    content: url("../assets/Home/technicalRacing.png");
+    width: 150%;
+    height: 150%;
+
+    border: 3px solid black;
+    box-shadow: 8px 8px black;
+}
+
+#esp32 img{
+    margin-top: 30px;
+    margin-left: -30px;
+    clear: left;
+    float: left;
+    content: url("../assets/Home/esp32.jpg");
+    width: 100%;
+    height: 100%;
+
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+
+#esp32 h3{
+    margin-top: 10px;
+    margin-left: 300px;
+    float: left;
+    width: 400px;
+}
+
+#my-image-operations img{
+    margin-top: 15px;
+    margin-left: -20px;
+    clear: left;
+    float: left;
+    content: url("../assets/Home/brumhilde.jpg");
+    width: 100%;
+    height: 100%;
+
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+
+#my-image-operations h3{
+    margin-top: 100px;
+    margin-left: 300px;
+    float: left;
+    width: 400px;
 }
 
 #main p{
@@ -191,19 +297,17 @@ body::-webkit-scrollbar {
     opacity: .3;
 }
 
-#main #more{
-    width: 200px;
-    height: 200px;
-    background-image: url(../assets/Home/moreWhite.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    margin-top: 300px;
-    position:absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-
-    top:-300px;
+.fadein-projects{
+    transition: transform 1s, opacity 1s;
+    transform: translateY(-300px);
+    opacity: 1;
 }
+
+.fadeout-projects{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(-90px);
+    opacity: .3;
+}
+
+
+

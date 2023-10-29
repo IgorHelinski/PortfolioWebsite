@@ -4,7 +4,11 @@
 
   let y = 0;
   let aboutme = "fadeout";
-  let projects = "fadeout";
+  let projects = "fadeout-projects";
+  let depozyto = "fadeout";
+  let technical_racing = "fadeout";
+  let esp32 = "fadeout";
+  let myimageoperations = "fadeout";
 
   function toTop(){
     if(y == 0)
@@ -31,8 +35,32 @@
     }else{
       projects = "fadeout";
     }
-  }
 
+    if(y >= 500){
+      depozyto = "fadein";
+    }else{
+      depozyto = "fadeout";
+    }
+
+    if(y >= 600){
+      technical_racing = "fadein";
+    }else{
+      technical_racing = "fadeout";
+    }
+
+    if(y >= 1300){
+      esp32 = "fadein";
+    }else{
+      esp32 = "fadeout";
+    }
+
+      if(y >= 1400){
+      myimageoperations = "fadein";
+    }else{
+      myimageoperations = "fadeout";
+    }
+  }
+  
   onMount(async () => {
     //console.log("ayuo");
       window.scroll({
@@ -51,16 +79,22 @@
     <div id="nav-bar">
       <h2>Igor Heliński Portfolio</h2>
       <a href="#/business/"><button>Business</button></a>
+      <a href="#/"><button>Blog</button></a>
       <a href="#/cursegiver/"><button>Curse Giver Project</button></a>
-      <a href="#/windows7/"><button>Windows 7</button></a>
+      <div id="spacer">&nbsp;</div>
+      <a href="https://github.com/IgorHelinski" target=”_blank”><button>Github</button></a>
+      <a href="https://twitter.com/Zirael65" target=”_blank”><button>Twitter</button></a>
+      <a href="https://404dev.itch.io" target=”_blank”><button>Itch.io</button></a>
+      <a href="https://www.youtube.com/channel/UC17TM7Ttarn57Oz1zmENppw" target=”_blank”><button>Youtube</button></a>
     </div>
-    <div id="nav-box" class="material-symbols-outlined"></div>
+    <div id="nav-box"></div>
+    <div id="nav-title">Igor Heliński Portfolio</div>
   </section>
 
   <div style="background-color: red;"></div>
 
   <section id="title">
-    <h1>Welcome to my <span>awesome</span> website {y}</h1>
+    <h1>Welcome to my <span>awesome</span> website</h1>
   </section>
 
   <section id="main">
@@ -81,6 +115,47 @@
 
     <div id="projects" class="{projects}">
       <h2>Some of my projects:</h2>
+    </div>
+
+    <div id="depozyto" class="project {depozyto}">
+      <h3>
+        Depozyto : <br>
+        This is a banking website i've made with my friend at our one month internship.
+        It's made in .NET and has an SQL database
+        <img src="" alt="depozyto1">
+      </h3>
+      
+    </div>
+
+    <div id="technical-racing" class="project {technical_racing}">
+      <h3>
+        Technical Racing : <br>
+        This is an unfinished game of mine about racing with technicals made in Unity
+        <br>
+        It has car suspencion phisics and integration with steamworks. Matchmaking is handled by steam so you can invite players from your friends list. 
+        <img src="" alt="technical-racing1">
+      </h3>
+    </div>
+
+    <div id="esp32" class="project {esp32}">
+      <h3>
+        ESP32 camera IoT projects: <br>
+        I've been playing around with the ESP32 camera chip and i learned a lot about C headers and how thoes boards work. 
+        I made a litte program that takes photo every couple of seconds and you can put it together to ger a really nice timelapse
+        <br>
+        Im still working on a function to take photos remotley with a PHP website.
+        <img src="" alt="">
+      </h3>
+    </div>
+
+    <div id="my-image-operations" class="project {myimageoperations}">
+      <h3>
+        My Image Operations : <br>
+        That's a cmd application made with C# that takes a photo and does something with it.
+        <br>
+        I used a Floyd-Steinbergs alghoritm to get this nice dithered effect
+        <img src="" alt="technical-racing1">
+      </h3>
     </div>
 
   </section>

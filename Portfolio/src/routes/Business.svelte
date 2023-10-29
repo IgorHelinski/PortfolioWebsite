@@ -1,5 +1,5 @@
 <script>
-
+    import '../css/business.css'
 </script>
 
 <body>
@@ -28,61 +28,3 @@
         </ul>
     </div>
 </body>
-
-<style>
-    body{
-        height: 100%;
-        background-image: none;
-        background-color: #242424;
-        overflow: scroll;
-        background-attachment: scroll;
-    }
-
-    .bg{
-        margin: 80px;
-        padding: 15px;
-        padding-top: 80px;
-        background-color: whitesmoke;
-        border-radius: 20px;
-    }
-
-    h1{
-        font-family: 'Poppins', sans-serif;
-        font-weight: 100;
-        margin-bottom: 20px;
-        color:black;
-        text-align: center;
-        font-size: 55px;
-    }
-
-    .chapters li{
-        margin: auto 110px;
-
-        font-family: 'Poppins', sans-serif;
-        color:black;
-        font-weight: bold;
-        font-size: x-large;
-    }
-
-    .chapters li p{
-        font-family: 'Poppins', sans-serif;
-        color:black;
-        font-weight: 400;
-        font-size: large;
-    }
-
-    @media only screen and (max-width:700px) {
-        body{
-            overflow: scroll;
-        }
-
-        .bg{
-            margin: 20px;
-            padding: 15px;
-        }
-
-        .chapters li{
-            margin: auto 10px;
-        }
-    }
-</style>
