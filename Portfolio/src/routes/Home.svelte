@@ -10,7 +10,6 @@
     if(y == 0)
      return;
 
-     
     window.scroll({
         top: 0, 
         left: 0, 
