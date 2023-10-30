@@ -77,15 +77,16 @@
 <div id="page-wrapper" on:scroll={() => {alert("scrolled")}}>
   <section id="nav">
     <div id="nav-bar">
-      <h2>Igor Heliński Portfolio</h2>
-      <a href="#/business/"><button>Business</button></a>
-      <a href="#/"><button>Blog</button></a>
-      <a href="#/cursegiver/"><button>Curse Giver Project</button></a>
+      <h2>IH</h2>
+      <button id="scroll-more">More</button>
+      <button id="scroll-social-media">Social Media</button>
+      <a href="#/business/"><button class="more">Business</button></a>
+      <a href="#/cursegiver/"><button class="more">Curse Giver Project</button></a>
       <div id="spacer">&nbsp;</div>
-      <a href="https://github.com/IgorHelinski" target=”_blank”><button>Github</button></a>
-      <a href="https://twitter.com/Zirael65" target=”_blank”><button>Twitter</button></a>
-      <a href="https://404dev.itch.io" target=”_blank”><button>Itch.io</button></a>
-      <a href="https://www.youtube.com/channel/UC17TM7Ttarn57Oz1zmENppw" target=”_blank”><button>Youtube</button></a>
+      <a href="https://github.com/IgorHelinski" target=”_blank”><button class="social">Github</button></a>
+      <a href="https://twitter.com/Zirael65" target=”_blank”><button class="social">Twitter</button></a>
+      <a href="https://404dev.itch.io" target=”_blank”><button class="social">Itch.io</button></a>
+      <a href="https://www.youtube.com/channel/UC17TM7Ttarn57Oz1zmENppw" target=”_blank”><button class="social">Youtube</button></a>
     </div>
     <div id="nav-box"></div>
     <div id="nav-title">Igor Heliński Portfolio</div>
@@ -110,34 +111,39 @@
         Besides game dev i played around with some IoT projects and image processing stuff
         I also make silly videos on my Youtube channel.
       </h3>
-      <img src="" alt="me">
+      <div id="img">
+        <img src="" alt="me">
+      </div>
     </div>
 
     <div id="projects" class="{projects}">
       <h2>Some of my projects:</h2>
     </div>
 
-    <div id="depozyto" class="project {depozyto}">
+    <div id="depozyto" class="{depozyto}">
       <h3>
         Depozyto : <br>
         This is a banking website i've made with my friend at our one month internship.
         It's made in .NET and has an SQL database
-        <img src="" alt="depozyto1">
       </h3>
-      
+      <div id="img">
+        <img src="" alt="depozyto1" width="30"  height="20">
+      </div>
     </div>
 
-    <div id="technical-racing" class="project {technical_racing}">
+    <div id="technical-racing" class="{technical_racing}">
       <h3>
         Technical Racing : <br>
         This is an unfinished game of mine about racing with technicals made in Unity
         <br>
         It has car suspencion phisics and integration with steamworks. Matchmaking is handled by steam so you can invite players from your friends list. 
-        <img src="" alt="technical-racing1">
       </h3>
+      <div id="img">
+        <img src="" alt="technical-racing1">
+      </div>
     </div>
 
-    <div id="esp32" class="project {esp32}">
+    <div id="esp32" class="{esp32}">
       <h3>
         ESP32 camera IoT projects: <br>
         I've been playing around with the ESP32 camera chip and i learned a lot about C headers and how thoes boards work. 
@@ -148,7 +154,7 @@
       </h3>
     </div>
 
-    <div id="my-image-operations" class="project {myimageoperations}">
+    <div id="my-image-operations" class="{myimageoperations}">
       <h3>
         My Image Operations : <br>
         That's a cmd application made with C# that takes a photo and does something with it.
@@ -157,8 +163,8 @@
         <img src="" alt="technical-racing1">
       </h3>
     </div>
-
   </section>
+
   <section id="footer"></section>
 </div>
 

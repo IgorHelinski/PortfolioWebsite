@@ -131,13 +131,14 @@ body::-webkit-scrollbar {
 }
 
 #title h1{
+    margin-top: 200px;
+
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 550%;
     color: white;
     text-shadow: 3px 3px 8px black;
-    margin-top: 200px;
     letter-spacing: 1px;
 }
 
@@ -151,56 +152,81 @@ body::-webkit-scrollbar {
 }
 
 #main h2 {
-    float: left;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
     margin: 5px;
-    margin-left: 450px;
-    margin-right: 300px;
+
+    text-align: center;
     font-weight: 50;
     font-size: 400%;
     font-family: 'Poppins', sans-serif;
     color: white;
     text-shadow: 3px 3px 8px black;
     letter-spacing: 1px;
+}
 
-    clear: both;
+#main #about-me #img{
+    float: left;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    width: 10%;
 }
 
 #main #about-me img{
-    float: left;
     content: url("../assets/Home/brumhilde.jpg");
-
     border: 3px solid black;
     box-shadow: 10px 10px black;
 }
 
-#main #about-me img{
-    margin-bottom: 30px;
+#main #about-me{
+    margin: 0 auto;
+    width: 50%;
 }
 
 #main h3{
     float: left;
-    clear: left;
+    
+    margin-right: 15px;
+    margin-left: -120px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    width: 80%;
+
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 150%;
     line-height: 38px;
     letter-spacing: 1px;
-
     color:aliceblue;
     text-shadow: 3px 3px 8px black;
-
-    margin-left: 460px;
-    margin-right: 50px;
-    margin-top: 15px;
-    width: 500px;
-
-    margin-bottom: 30px;
 }
 
-.project{
+#depozyto{
+    margin: 0 auto;
+    width: 50%;
+}
+
+#depozyto #img{
     float: left;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    width: 100%;
 }
 
+#depozyto img{
+    width: 150%;
+
+    content: url("../assets/Home/depozyto1.png");
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+
+/*
 #depozyto img{
     margin-top: 30px;
     margin-left: -100px;
@@ -220,6 +246,7 @@ body::-webkit-scrollbar {
     float: left;
     width: 400px;
 }
+*/
 
 #technical-racing h3{
     margin-top: 100px;
@@ -297,16 +324,221 @@ body::-webkit-scrollbar {
     opacity: .3;
 }
 
-.fadein-projects{
-    transition: transform 1s, opacity 1s;
-    transform: translateY(-300px);
-    opacity: 1;
+#scroll-more{
+    display: none;
 }
 
-.fadeout-projects{
-    transition: transform 1s , opacity 1s;
-    transform: translateY(-90px);
-    opacity: .3;
+#scroll-more{
+    display: none;
+
+    float:right;
+    position: relative;
+    padding: 25px 0px;
+    margin: 0px 10px;
+    width: 150px;
+
+    border: none;
+    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    text-align: center;
+
+    transition: transform .5s;
+    transform: translate(0px, 0px);
+    box-shadow: 7px 7px black;
+}
+
+#scroll-social-media{
+    display: none;
+
+    float:right;
+    position: relative;
+    padding: 25px 0px;
+    margin: 0px 10px;
+    width: 150px;
+
+    border: none;
+    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: center;
+
+    transition: transform .5s;
+    transform: translate(0px, 0px);
+    box-shadow: 7px 7px black;
+}
+
+.more:hover{
+    transition: transform .5s;
+    transform: translate(-5px, -5px);
+}
+
+.social:active{
+    transition: transform .2s;
+    transform: translate(3px, 3px);
+}
+
+
+
+@media only screen and (max-width:1150px) {
+
+    #title h1{
+        color: red;
+        font-size: 400%;
+    }
+
+    #scroll-social-media{
+        display: block;
+    }
+
+    .social{
+        display: none;
+    }
+
+    /*
+
+    #main h2{
+        margin-left: 40px;
+        font-size: 300%;
+        width: 300px;
+    }
+
+    #main h3{
+        margin-left: 25px;
+        width: 300px;
+        margin-right: 5px;
+    }
+
+    #main #about-me img{
+        width: 200px;
+        margin-left: 25px;
+    }
+
+    #depozyto img{
+        width:320px;
+        margin-left: 0px;
+    }
+
+    #depozyto h3{
+        margin-top: 35px;
+    }
+
+    #technical-racing img{
+        width:320px;
+        margin-left: 0px;
+    }
+
+    #technical-racing h3{
+        margin-top: 35px;
+    }
+
+    #esp32 img{
+        width:320px;
+        margin-left: 0px;
+    }
+
+    #esp32 h3{
+        margin-top: 35px;
+    }
+
+    #my-image-operations img{
+        width:320px;
+        margin-left: 0px;
+    }
+
+    #my-image-operations h3{
+        margin-top: 35px;
+    }
+
+    */
+}
+
+@media only screen and (max-width:800px) {
+
+    #main #about-me #img{
+        
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    #title h1{
+        color: yellow;
+        font-size: 250%;
+    }
+
+    #nav-bar #spacer{
+        display: none;
+    }
+
+    #scroll-more{
+        display: block;
+    }
+
+    .more{
+        display: none;
+    }
+
+    /*
+
+    #main h2{
+        margin-left: 20px;
+        font-size: 300%;
+        width: 300px;
+    }
+
+    #main h3{
+        margin-left: 25px;
+        width: 300px;
+        margin-right: 5px;
+    }
+
+    #main #about-me img{
+        width: 200px;
+        margin-left: 25px;
+    }
+
+    #depozyto img{
+        width:320px;
+        margin-left: 0px;
+    }
+
+    #depozyto h3{
+        margin-top: 35px;
+    }
+
+    #technical-racing img{
+        width:320px;
+        margin-left: 0px;
+    }
+
+    #technical-racing h3{
+        margin-top: 35px;
+    }
+
+    #esp32 img{
+        width:320px;
+        margin-left: 0px;
+    }
+
+    #esp32 h3{
+        margin-top: 35px;
+    }
+
+    #my-image-operations img{
+        width:320px;
+        margin-left: 0px;
+    }
+
+    #my-image-operations h3{
+        margin-top: 35px;
+    }
+
+    #nav-bar h2{
+        display: none;
+    }
+
+    */
 }
 
 
